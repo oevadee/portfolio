@@ -1,5 +1,6 @@
 import React from 'react';
 import { UseFormRegister } from 'react-hook-form';
+import { ContactFormValues } from 'src/types';
 import styled, { css } from 'styled-components';
 
 export const inputWrapperStyle = css`
@@ -68,18 +69,16 @@ export const StyledInput = ({
   register,
   placeholder,
   required = false,
-}: Props) => {
-  return (
-    <SWrapper>
-      {label && <SLabel htmlFor={name}>{label}</SLabel>}
-      <SInput
-        required={required}
-        {...register(name)}
-        placeholder={placeholder}
-        type={type}
-        name={name}
-      />
-      {required && <SRequired>input required</SRequired>}
-    </SWrapper>
-  );
-};
+}: Props) => (
+  <SWrapper>
+    {label && <SLabel htmlFor={name}>{label}</SLabel>}
+    <SInput
+      required={required}
+      {...register(name)}
+      placeholder={placeholder}
+      type={type}
+      name={name}
+    />
+    {required && <SRequired>input required</SRequired>}
+  </SWrapper>
+);

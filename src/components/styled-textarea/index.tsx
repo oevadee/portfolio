@@ -25,11 +25,9 @@ export const StyledTextarea = ({
   name,
   label,
   placeholder,
-}: Props) => {
-  return (
-    <SWrapper>
-      {label && <SLabel>{label}</SLabel>}
-      <STextarea {...register(name)} placeholder={placeholder} name={name} />
-    </SWrapper>
-  );
-};
+}: Props) => (
+  <SWrapper>
+    {label && <SLabel>{label}</SLabel>}
+    <STextarea {...register(name)} placeholder={placeholder} name={name} />
+  </SWrapper>
+);

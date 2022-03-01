@@ -3,6 +3,7 @@ import { StyledInput } from 'components/styled-input';
 import { StyledTextarea } from 'components/styled-textarea';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { ContactFormValues } from 'src/types';
 import styled from 'styled-components';
 
 const SSection = styled.section`
@@ -23,8 +24,9 @@ const SStyledButton = styled(StyledButton)`
 `;
 
 export const ContactView = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (values: any) => {
+  const { register, handleSubmit } = useForm<ContactFormValues>();
+
+  const onSubmit = async (values: ContactFormValues) => {
     console.log(values);
   };
 
