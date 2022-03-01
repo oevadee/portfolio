@@ -15,7 +15,8 @@
       "pages/*": ["./src/pages/*"],
       "router/*": ["./src/router/*"],
       "views/*": ["./src/views/*"],
-      "modules/*": ["./src/modules/*"]
+      "modules/*": ["./src/modules/*"],
+      "svgs/*": ["./src/svgs/*"]
     }
   }
 }
