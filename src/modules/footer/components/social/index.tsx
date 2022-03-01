@@ -17,11 +17,9 @@ interface Props {
   name: string;
 }
 
-export const Social = ({ icon, name }: Props) => {
-  return (
-    <SWrapper>
-      {icon}
-      <SParahraph>{name}</SParahraph>
-    </SWrapper>
-  );
-};
+export const Social = ({ icon, name }: Props) => (
+  <SWrapper>
+    {icon}
+    <SParahraph>{name}</SParahraph>
+  </SWrapper>
+);
