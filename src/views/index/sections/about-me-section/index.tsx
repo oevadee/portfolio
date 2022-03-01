@@ -1,9 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { StyledHeader } from "components/styled-header";
+import React from 'react';
+import styled from 'styled-components';
+import { StyledHeader } from 'components/styled-header';
 
 const SSection = styled.section`
   margin-top: 16.4375rem;
+
+  @media (max-width: 768px) {
+    margin-top: 10rem;
+  }
 `;
 
 const SParagraph = styled.p`
@@ -12,7 +16,7 @@ const SParagraph = styled.p`
   text-align: justify;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: -1rem;

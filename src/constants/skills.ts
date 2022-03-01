@@ -32,15 +32,15 @@ export const skills = [
     imageName: 'reactNative',
   },
   {
-    technology: 'Styled Components',
-    imageName: 'styledComponents',
-  },
-  {
     technology: 'Redux',
     imageName: 'redux',
   },
   {
     technology: 'Git',
     imageName: 'git',
+  },
+  {
+    technology: 'Styled Components',
+    imageName: 'styledComponents',
   },
 ];

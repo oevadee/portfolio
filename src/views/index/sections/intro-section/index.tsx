@@ -10,6 +10,12 @@ const SSection = styled.section`
   align-items: center;
   justify-content: space-between;
   gap: 5.3125rem;
+
+  @media (max-width: 768px) {
+    gap: 0;
+    margin-top: 2rem;
+    flex-direction: column-reverse;
+  }
 `;
 
 const STextWrapper = styled.h2`

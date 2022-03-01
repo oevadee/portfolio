@@ -10,7 +10,6 @@ const SWrapper = styled.div`
 `;
 
 const SImage = styled(GatsbyImage)`
-  height: 7.5rem;
   width: 7.5rem;
 `;
 

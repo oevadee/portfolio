@@ -17,6 +17,10 @@ const SMain = styled.main`
   max-width: 1200px;
   min-height: 100vh;
   padding: 0 11.75rem;
+
+  @media (max-width: 678px) {
+    padding: 0 2rem;
+  }
 `;
 
 interface Props {
