@@ -36,6 +36,8 @@ const SName = styled.p`
 const SDescription = styled.p`
   max-width: 34.125rem;
   margin-bottom: 1.75rem;
+  letter-spacing: 4%;
+  line-height: 1.5rem;
 `;
 
 const SImage = styled(GatsbyImage)`
