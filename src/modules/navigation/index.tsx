@@ -1,16 +1,19 @@
-import { Link } from "gatsby";
-import React from "react";
-import styled from "styled-components";
+import { StyledButton } from 'components/styled-button';
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
 
 const SNav = styled.nav`
+  max-width: 1200px;
+  padding: 0 11.75rem;
+  width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 0;
 `;
 
-const SHeader = styled.h2`
+const SHeader = styled(Link)`
   font-size: 1rem;
 `;
 
@@ -29,14 +32,12 @@ const SList = styled.ul`
 export const Navigation = () => {
   return (
     <SNav>
-      <SHeader>Home</SHeader>
+      <SHeader to="/">Home</SHeader>
       <SList>
         <li>
           <Link to="/projects">projects</Link>
         </li>
-        <li>
-          <Link to="/about-me">about me</Link>
-        </li>
+        <StyledButton to="/contact">Contact</StyledButton>
       </SList>
     </SNav>
   );

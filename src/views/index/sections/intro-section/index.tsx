@@ -1,8 +1,8 @@
-import { StyledButton } from "components/styled-button";
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import React from "react";
-import styled from "styled-components";
+import { StyledButton } from 'components/styled-button';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import React from 'react';
+import styled from 'styled-components';
 
 const SSection = styled.section`
   margin-top: 6rem;
@@ -36,13 +36,13 @@ const SName = styled.p`
 const SDescription = styled.p`
   max-width: 34.125rem;
   margin-bottom: 1.75rem;
+  letter-spacing: 4%;
+  line-height: 1.5rem;
 `;
 
-const SImageWrapper = styled.div``;
-
 const SImage = styled(GatsbyImage)`
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 `;
 
 export const IntroSection = () => {
@@ -71,14 +71,14 @@ export const IntroSection = () => {
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt.
         </SDescription>
-        <StyledButton to="/projects">Contact me</StyledButton>
+        <StyledButton to="/contact">Contact me</StyledButton>
       </STextWrapper>
-      <SImageWrapper>
+      <div>
         <SImage
           image={data.nerd.childImageSharp.gatsbyImageData}
           alt="Software engineer"
         />
-      </SImageWrapper>
+      </div>
     </SSection>
   );
 };
