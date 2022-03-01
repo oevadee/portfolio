@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 
-const SWrapper = styled.div`
+const SWrapper = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,10 +15,11 @@ const SParahraph = styled.p`
 interface Props {
   icon: ReactElement;
   name: string;
+  url: string;
 }
 
-export const Social = ({ icon, name }: Props) => (
-  <SWrapper>
+export const Social = ({ icon, name, url }: Props) => (
+  <SWrapper href={url} target="_blank">
     {icon}
     <SParahraph>{name}</SParahraph>
   </SWrapper>

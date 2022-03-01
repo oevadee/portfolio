@@ -1,14 +1,18 @@
-import React from "react";
-import styled from "styled-components";
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
+import React from 'react';
+import styled from 'styled-components';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
-import { StyledHeader } from "components/styled-header";
-import { TechnologyTab } from "../technology-tab";
+import { StyledHeader } from 'components/styled-header';
+import { TechnologyTab } from '../technology-tab';
 
 const SWrapper = styled.div`
   width: 32.625rem;
   background: ${({ theme }) => theme.colors.card};
   border-radius: 0.375rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const SImage = styled(GatsbyImage)`

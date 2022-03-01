@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { graphql, useStaticQuery } from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import { StyledHeader } from "components/styled-header";
-import { ProjectCard } from "./components/project-card";
-import { sampleProjectTechnologies } from "constants/technologies";
-import { StyledButton } from "components/styled-button";
+import { StyledHeader } from 'components/styled-header';
+import { ProjectCard } from './components/project-card';
+import { sampleProjectTechnologies } from 'constants/technologies';
+import { StyledButton } from 'components/styled-button';
 
 const SSection = styled.section`
   margin-top: 8.125rem;
@@ -15,6 +15,10 @@ const SProjectsWrapper = styled.div`
   display: flex;
   gap: 1.75rem;
   margin-bottom: 2.375rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const SButtonWrapper = styled.div`

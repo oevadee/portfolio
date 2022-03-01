@@ -11,6 +11,10 @@ const SNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `;
 
 const SHeader = styled(Link)`
@@ -26,6 +30,10 @@ const SList = styled.ul`
   > li {
     font-weight: 500;
     text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    gap: 2rem;
   }
 `;
 
