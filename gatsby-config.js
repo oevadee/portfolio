@@ -1,13 +1,29 @@
-/** @type {import('gatsby').GatsbyConfig} */
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
-      title: `portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `My portfolio`,
+    description: `Showcase of developing static site`,
+    author: `@oevadee`,
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }]
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: ["Montserrat"],
+        display: "swap",
+      },
+    },
+  ],
 };
