@@ -1,5 +1,6 @@
 import { StyledButton } from 'components/styled-button';
 import { StyledInput } from 'components/styled-input';
+import { StyledTextarea } from 'components/styled-textarea';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
@@ -11,6 +12,7 @@ const SSection = styled.section`
 `;
 
 const SForm = styled.form`
+  width: 33.25rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -29,12 +31,25 @@ export const ContactView = () => {
   return (
     <SSection>
       <SForm onSubmit={handleSubmit(onSubmit)}>
-        <StyledInput register={register} name="name" label="Name" />
         <StyledInput
+          placeholder="Enter your name"
+          register={register}
+          name="name"
+          label="Name"
+        />
+        <StyledInput
+          placeholder="Enter your e-mail"
           register={register}
           name="email"
           label="E-mail"
           type="email"
+          required
+        />
+        <StyledTextarea
+          register={register}
+          name="message"
+          label="Message"
+          placeholder="Write your message"
         />
         <SStyledButton type="submit">Submit</SStyledButton>
       </SForm>

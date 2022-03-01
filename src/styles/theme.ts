@@ -7,6 +7,7 @@ export const theme = {
     powderBlue: '#BDEBEA',
     darkText: '#1F2626',
     placeholderText: '#919b9b',
+    red: '#C05353',
   },
   font: {
     size: {
