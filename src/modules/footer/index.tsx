@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { Social } from './components/social';
 import Gmail from 'assets/ic-gmail.svg';
 import LinkedIn from 'assets/ic-linkedin.svg';
-import GitHub from 'assets/ic-github.svg';
+import Github from 'assets/ic-github.svg';
+import { githubUrl, linkedInUrl } from 'constants/socialsUrls';
 
 const SFooter = styled.footer`
   margin: 17.5rem 0 5.75rem;
@@ -26,10 +27,12 @@ const socials = [
   {
     icon: <LinkedIn />,
     name: 'LinkedIn',
+    url: linkedInUrl,
   },
   {
-    icon: <GitHub />,
+    icon: <Github />,
     name: 'Github',
+    url: githubUrl,
   },
 ];
 
@@ -37,8 +40,8 @@ export const Footer = () => {
   return (
     <SFooter>
       <SSocialsWrapper>
-        {socials.map(({ icon, name }) => (
-          <Social icon={icon} name={name} />
+        {socials.map(({ icon, name, url }) => (
+          <Social icon={icon} name={name} url={url} />
         ))}
       </SSocialsWrapper>
     </SFooter>
