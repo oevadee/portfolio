@@ -1,81 +1,40 @@
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
 import styled from "styled-components";
+import { StyledHeader } from "components/styled-header";
 
 const SSection = styled.section`
-  margin-top: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5.3125rem;
+  margin-top: 16.4375rem;
 `;
 
-const STextWrapper = styled.h2`
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  text-align: left;
-  gap: 0.625rem;
-`;
+const SParagraph = styled.p`
+  position: relative;
+  font-size: ${({ theme }) => theme.font.size.medium};
+  text-align: justify;
 
-const SHeader = styled.h2`
-  font-size: ${({ theme }) => theme.font.size.bigger};
-  text-transform: uppercase;
-`;
-
-const SName = styled.p`
-  font-size: 4.5rem;
-  font-weight: 600;
-  background: ${({ theme }) => theme.colors.gradient};
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-`;
-
-const SDescription = styled.p`
-  max-width: 34.125rem;
-`;
-
-const SImageWrapper = styled.div``;
-
-const SImage = styled(GatsbyImage)`
-  width: 500px;
-  height: 500px;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: 0.25rem;
+    height: 100%;
+    background: ${({ theme }) => theme.colors.gradient};
+    border-radius: 0.125rem;
+  }
 `;
 
 export const AboutMeSection = () => {
-  const data = useStaticQuery(graphql`
-    query Nerd {
-      nerd: file(relativePath: { eq: "nerd.png" }) {
-        id
-        childImageSharp {
-          gatsbyImageData(
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-            layout: FULL_WIDTH
-          )
-        }
-      }
-    }
-  `);
-
   return (
     <SSection>
-      <STextWrapper>
-        <SHeader>Web developer</SHeader>
-        <SName>Adrian Szczechura</SName>
-        <SDescription>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt.
-        </SDescription>
-      </STextWrapper>
-      <SImageWrapper>
-        <SImage
-          image={data.nerd.childImageSharp.gatsbyImageData}
-          alt="Software engineer"
-        />
-      </SImageWrapper>
+      <StyledHeader>About me</StyledHeader>
+      <SParagraph>
+        The long barrow was built on land previously inhabited in the Mesolithic
+        period. It consisted of a sub-rectangular earthen tumulus, estimated to
+        have been 15 metres (50 feet) in length, with a chamber built from
+        sarsen megaliths on its eastern end. Both inhumed and cremated human
+        remains were placed within this chamber during the Neolithic period,
+        representing at least nine or ten individuals.
+      </SParagraph>
     </SSection>
   );
 };
