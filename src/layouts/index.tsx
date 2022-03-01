@@ -6,6 +6,7 @@ import { theme } from "styles/theme";
 
 const SWrapper = styled.div`
   width: 100%;
+  max-width: 1200px;
   min-height: 100vh;
   padding: 0 11.75rem;
 `;

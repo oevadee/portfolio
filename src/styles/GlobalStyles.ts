@@ -2,10 +2,13 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 * {
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     letter-spacing: 0;
     color: #BDEBEA;
+    margin: 0;
+    padding: 0;
 }
 html {
     background: #041F31;
@@ -24,7 +27,6 @@ html {
     }
 }
 body {
-    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: normal;
