@@ -71,7 +71,7 @@ export const IntroSection = () => {
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt.
         </SDescription>
-        <StyledButton to="/projects">Contact me</StyledButton>
+        <StyledButton to="/contact">Contact me</StyledButton>
       </STextWrapper>
       <div>
         <SImage

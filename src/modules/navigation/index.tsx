@@ -1,3 +1,4 @@
+import { StyledButton } from 'components/styled-button';
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
@@ -12,7 +13,7 @@ const SNav = styled.nav`
   justify-content: space-between;
 `;
 
-const SHeader = styled.h2`
+const SHeader = styled(Link)`
   font-size: 1rem;
 `;
 
@@ -31,14 +32,12 @@ const SList = styled.ul`
 export const Navigation = () => {
   return (
     <SNav>
-      <SHeader>Home</SHeader>
+      <SHeader to="/">Home</SHeader>
       <SList>
         <li>
           <Link to="/projects">projects</Link>
         </li>
-        <li>
-          <Link to="/about-me">about me</Link>
-        </li>
+        <StyledButton to="/contact">Contact</StyledButton>
       </SList>
     </SNav>
   );

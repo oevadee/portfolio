@@ -8,7 +8,7 @@ const SLink = styled(Link)`
   color: ${({ theme }) => theme.colors.darkText};
   border-radius: 0.375rem;
   width: fit-content;
-  font-weight: ${({ theme }) => theme.font.weight.semibold};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
 `;
 
 interface Props {
