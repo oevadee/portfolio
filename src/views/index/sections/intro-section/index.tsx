@@ -1,8 +1,8 @@
-import { StyledButton } from "components/styled-button";
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import React from "react";
-import styled from "styled-components";
+import { StyledButton } from 'components/styled-button';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import React from 'react';
+import styled from 'styled-components';
 
 const SSection = styled.section`
   margin-top: 6rem;
@@ -38,11 +38,9 @@ const SDescription = styled.p`
   margin-bottom: 1.75rem;
 `;
 
-const SImageWrapper = styled.div``;
-
 const SImage = styled(GatsbyImage)`
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 `;
 
 export const IntroSection = () => {
@@ -73,12 +71,12 @@ export const IntroSection = () => {
         </SDescription>
         <StyledButton to="/projects">Contact me</StyledButton>
       </STextWrapper>
-      <SImageWrapper>
+      <div>
         <SImage
           image={data.nerd.childImageSharp.gatsbyImageData}
           alt="Software engineer"
         />
-      </SImageWrapper>
+      </div>
     </SSection>
   );
 };

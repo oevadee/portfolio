@@ -1,13 +1,15 @@
-import { Link } from "gatsby";
-import React from "react";
-import styled from "styled-components";
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
 
 const SNav = styled.nav`
+  max-width: 1200px;
+  padding: 0 11.75rem;
+  width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 0;
 `;
 
 const SHeader = styled.h2`
