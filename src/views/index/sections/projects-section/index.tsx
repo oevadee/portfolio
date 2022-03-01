@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { StyledHeader } from "components/styled-header";
 import { ProjectCard } from "./components/project-card";
 import { sampleProjectTechnologies } from "constants/technologies";
+import { StyledButton } from "components/styled-button";
 
 const SSection = styled.section`
   margin-top: 8.125rem;
@@ -13,6 +14,13 @@ const SSection = styled.section`
 const SProjectsWrapper = styled.div`
   display: flex;
   gap: 1.75rem;
+  margin-bottom: 2.375rem;
+`;
+
+const SButtonWrapper = styled.div`
+  width: 100%;
+  display: grid;
+  place-items: center;
 `;
 
 export const ProjectsSection = () => {
@@ -47,6 +55,9 @@ export const ProjectsSection = () => {
           technologies={sampleProjectTechnologies}
         />
       </SProjectsWrapper>
+      <SButtonWrapper>
+        <StyledButton to="/projects">See all projects</StyledButton>
+      </SButtonWrapper>
     </SSection>
   );
 };

@@ -1,3 +1,4 @@
+import { StyledButton } from "components/styled-button";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react";
@@ -34,6 +35,7 @@ const SName = styled.p`
 
 const SDescription = styled.p`
   max-width: 34.125rem;
+  margin-bottom: 1.75rem;
 `;
 
 const SImageWrapper = styled.div``;
@@ -69,6 +71,7 @@ export const IntroSection = () => {
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt.
         </SDescription>
+        <StyledButton to="/projects">Contact me</StyledButton>
       </STextWrapper>
       <SImageWrapper>
         <SImage

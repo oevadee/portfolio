@@ -5,7 +5,7 @@ export const theme = {
     white: "#D9F2F2",
     card: "#222525",
     powderBlue: "#BDEBEA",
-    tabText: "#1F2626",
+    darkText: "#1F2626",
   },
   font: {
     size: {
@@ -13,6 +13,12 @@ export const theme = {
       medium: "1.125rem",
       bigger: "1.25rem",
       biggest: "4.5rem",
+    },
+    weight: {
+      light: "300",
+      medium: "500",
+      semiBold: "600",
+      bold: "700",
     },
   },
   dimentions: {

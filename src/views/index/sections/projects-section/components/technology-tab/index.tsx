@@ -9,7 +9,7 @@ const SWrapper = styled.div`
   > p {
     text-transform: uppercase;
     letter-spacing: 12%;
-    color: ${({ theme }) => theme.colors.tabText};
+    color: ${({ theme }) => theme.colors.darkText};
     font-size: ${({ theme }) => theme.font.size.smaller};
   }
 `;
