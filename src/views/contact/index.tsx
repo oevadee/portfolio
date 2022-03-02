@@ -17,6 +17,10 @@ const SForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 3rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const SStyledButton = styled(StyledButton)`

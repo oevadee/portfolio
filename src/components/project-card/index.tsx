@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 import { StyledHeader } from 'components/styled-header';
-import { TechnologyTab } from '../technology-tab';
+import { TechnologyTab } from './components/technology-tab';
 
 const SWrapper = styled.div`
-  width: 32.625rem;
+  width: 100%;
   background: ${({ theme }) => theme.colors.card};
   border-radius: 0.375rem;
 
@@ -52,19 +52,17 @@ export const ProjectCard = ({
   header,
   description,
   technologies,
-}: Props) => {
-  return (
-    <SWrapper>
-      <SImage image={image} alt="sample project" />
-      <STextWrapper>
-        <SHeader>{header}</SHeader>
-        <STechnologiesWrapper>
-          {technologies.map((el: string) => (
-            <TechnologyTab technology={el} />
-          ))}
-        </STechnologiesWrapper>
-        <SDescription>{description}</SDescription>
-      </STextWrapper>
-    </SWrapper>
-  );
-};
+}: Props) => (
+  <SWrapper>
+    <SImage image={image} alt="sample project" />
+    <STextWrapper>
+      <SHeader>{header}</SHeader>
+      <STechnologiesWrapper>
+        {technologies.map((el: string) => (
+          <TechnologyTab technology={el} />
+        ))}
+      </STechnologiesWrapper>
+      <SDescription>{description}</SDescription>
+    </STextWrapper>
+  </SWrapper>
+);

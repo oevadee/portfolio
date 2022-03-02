@@ -15,7 +15,8 @@ export const theme = {
       small: '0.875rem',
       medium: '1.125rem',
       bigger: '1.25rem',
-      biggest: '4.5rem',
+      biggest: '2.5rem',
+      giant: '4.5rem',
     },
     weight: {
       light: '300',
