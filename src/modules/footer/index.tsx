@@ -23,6 +23,7 @@ const socials = [
   {
     icon: <Gmail />,
     name: 'Gmail',
+    url: '',
   },
   {
     icon: <LinkedIn />,

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { StyledHeader } from 'components/styled-header';
-import { ProjectCard } from './components/project-card';
+import { ProjectCard } from '../../../../components/project-card';
 import { sampleProjectTechnologies } from 'constants/technologies';
 import { StyledButton } from 'components/styled-button';
 
@@ -48,13 +48,13 @@ export const ProjectsSection = () => {
       <SProjectsWrapper>
         <ProjectCard
           image={data.sampleProject.childImageSharp.gatsbyImageData}
-          header="TITLE PROJECT"
+          header="DUMMY PROJECT"
           description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
           technologies={sampleProjectTechnologies}
         />
         <ProjectCard
           image={data.sampleProject.childImageSharp.gatsbyImageData}
-          header="TITLE PROJECT"
+          header="DUMMY PROJECT"
           description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
           technologies={sampleProjectTechnologies}
         />

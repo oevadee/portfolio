@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { StyledHeader } from 'components/styled-header';
 
 const SSection = styled.section`
-  margin-top: 16.4375rem;
+  margin-top: 14rem;
 
   @media (max-width: 768px) {
     margin-top: 10rem;
@@ -32,12 +32,10 @@ export const AboutMeSection = () => {
     <SSection>
       <StyledHeader>About me</StyledHeader>
       <SParagraph>
-        The long barrow was built on land previously inhabited in the Mesolithic
-        period. It consisted of a sub-rectangular earthen tumulus, estimated to
-        have been 15 metres (50 feet) in length, with a chamber built from
-        sarsen megaliths on its eastern end. Both inhumed and cremated human
-        remains were placed within this chamber during the Neolithic period,
-        representing at least nine or ten individuals.
+        I am fascinated with fashion. I like unique/limited pieces of clothing.
+        You will notice that when we meet :) I also like to listen to and record
+        some music. I take care of one dog "Juice" and one rabbit "Misia". There
+        are many more things but lets save it for meeting.
       </SParagraph>
     </SSection>
   );

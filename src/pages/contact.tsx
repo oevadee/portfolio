@@ -4,7 +4,7 @@ import { ContactView } from 'views/contact';
 
 const ContactPage = () => {
   return (
-    <Layout>
+    <Layout noFooter>
       <ContactView />
     </Layout>
   );

@@ -15,7 +15,7 @@ const SWrapper = styled.div`
 const SMain = styled.main`
   width: 100%;
   max-width: 1200px;
-  min-height: 100vh;
+  min-height: calc(100vh - ${({ theme }) => theme.dimentions.nav});
   padding: 0 11.75rem;
 
   @media (max-width: 678px) {
@@ -25,15 +25,16 @@ const SMain = styled.main`
 
 interface Props {
   children: ReactNode;
+  noFooter?: boolean;
 }
 
-export const Layout = ({ children }: Props) => (
+export const Layout = ({ children, noFooter = false }: Props) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <SWrapper>
       <Navigation />
       <SMain>{children}</SMain>
-      <Footer />
+      {!noFooter && <Footer />}
     </SWrapper>
   </ThemeProvider>
 );

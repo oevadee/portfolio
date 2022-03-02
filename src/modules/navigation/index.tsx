@@ -18,7 +18,7 @@ const SNav = styled.nav`
 `;
 
 const SHeader = styled(Link)`
-  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.font.weight.medium};
 `;
 
 const SList = styled.ul`
@@ -28,7 +28,7 @@ const SList = styled.ul`
   list-style: none;
 
   > li {
-    font-weight: 500;
+    font-weight: ${({ theme }) => theme.font.weight.medium};
     text-transform: uppercase;
   }
 

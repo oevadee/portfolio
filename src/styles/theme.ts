@@ -6,13 +6,17 @@ export const theme = {
     card: '#222525',
     powderBlue: '#BDEBEA',
     darkText: '#1F2626',
+    placeholderText: '#919b9b',
+    red: '#C05353',
   },
   font: {
     size: {
       smaller: '0.625rem',
+      small: '0.875rem',
       medium: '1.125rem',
       bigger: '1.25rem',
-      biggest: '4.5rem',
+      biggest: '2.5rem',
+      giant: '4.5rem',
     },
     weight: {
       light: '300',
