@@ -1,4 +1,4 @@
-import { apiUrl } from 'constants/urls';
+import { apiUrl } from 'constants/links';
 import { ContactFormValues } from 'src/types';
 
 export const sendContactMail = async (body: ContactFormValues) => {

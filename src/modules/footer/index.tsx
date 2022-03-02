@@ -4,7 +4,7 @@ import { Social } from './components/social';
 import Gmail from 'assets/ic-gmail.svg';
 import LinkedIn from 'assets/ic-linkedin.svg';
 import Github from 'assets/ic-github.svg';
-import { githubUrl, linkedInUrl } from 'constants/urls';
+import { githubUrl, linkedInUrl } from 'constants/links';
 
 const SFooter = styled.footer`
   margin: 17.5rem 0 5.75rem;
