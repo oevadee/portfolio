@@ -1,9 +1,9 @@
-import { urls } from 'constants/urls';
+// import { urls } from 'constants/urls';
 import { ContactFormValues } from 'src/types';
 
 export const sendContactMail = async (body: ContactFormValues) => {
   try {
-    const data = await fetch(urls.apiUrl, {
+    const data = await fetch('', {
       method: 'POST',
       body: JSON.stringify(body),
       headers: {
